@@ -12,7 +12,7 @@ let imagesArray = []
 let urls = [];
 form.addEventListener('submit', onClick);
 
-import {jsPSDF} from "jspdf";
+const { jsPDF } = window.jspdf;
 
 function onClick(event){
     console.log(event);
