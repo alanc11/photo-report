@@ -19,6 +19,7 @@ function onClick(event){
     // console.log(equipment.value);
     // console.log(serial.value);
     // console.log(date.value);
+    console.log("URL IMAGEN " + urls);
     entradas.innerText = fse.value + " - " + equipment.value + " - " + serial.value + " - " + date.value; 
 }
 
@@ -40,8 +41,9 @@ function displayImages() {
               <img src="${URL.createObjectURL(image)}" alt="image">
               <span onclick="deleteImage(${index})">&times;</span>
             </div>`
-      i++;
+      
       urls[i] = URL.createObjectURL(image);
+      i++;
       //console.log(urls);
       //console.log(i);  
   })
@@ -62,12 +64,47 @@ function genPDF(event){
   doc.text(20,30,'Número de serie: ' + serial.value);
   doc.text(20,35,'Fecha: ' + date.value);
 
-  const img = new Image();
-    img.src = urls[0];
-    console.log(urls[0]);
-    img.onload = () => {
-      doc.addImage(img,'png',20,45,65,65);
-      doc.save('reporte-fotografico.pdf');
+  const img1 = new Image();
+  img1.src = urls[0];
+  const img2 = new Image();
+  img2.src = urls[1];
+  const img3 = new Image();
+  img3.src = urls[2];
+  const img4 = new Image();
+  img4.src = urls[3];
+  const img5 = new Image();
+  img5.src = urls[4];
+  const img6 = new Image();
+  img6.src = urls[5];
+
+  img1.onload = () => {
+    img2.onload = () => {
+      img3.onload = () => {
+        img4.onload = () => {
+          img5.onload = () => {
+            img6.onload = () => {
+              console.log("Imagen cargada");
+              doc.addImage(img1, 'png',20,45,75,75);
+              doc.addImage(img2, 'png',20,130,75,75);
+              doc.addImage(img3, 'png',120,45,75,75);
+              doc.addImage(img4, 'png',120,130,75,75);
+              doc.addImage(img5, 'png',20,215,75,75);
+              doc.addImage(img6, 'png',120,215,75,75);
+              doc.save('reporte-fotografico.pdf');
+            }
+          }
+        }
+      }
+    }
   }
+  
+ 
+  // const img = new Image();
+  //   img.src = urls[0];
+  //   console.log(urls[0]);
+  //   img.onload = () => {
+  //     doc.addImage(img,'png',20,45,65,65);
+  //     doc.save('reporte-fotografico.pdf');
+  // }
 
 }
