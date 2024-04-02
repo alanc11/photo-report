@@ -12,6 +12,8 @@ let imagesArray = []
 let urls = [];
 form.addEventListener('submit', onClick);
 
+import {jsPSDF} from "jspdf";
+
 function onClick(event){
     console.log(event);
     event.preventDefault();
