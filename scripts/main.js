@@ -13,6 +13,11 @@ let urls = [];
 form.addEventListener('submit', onClick);
 
 
+import jsPDF from './node_modules/jspdf/dist/jspdf.node.min.js'
+import { applyPlugin } from 'jspdf-autotable'
+applyPlugin(jsPDF)
+
+
 function onClick(event){
     console.log(event);
     event.preventDefault();
@@ -85,12 +90,12 @@ function genPDF(event){
           img5.onload = () => {
             img6.onload = () => {
               console.log("Imagen cargada");
-              doc.addImage(img1, 'png',20,45,75,75);
-              doc.addImage(img2, 'png',20,130,75,75);
-              doc.addImage(img3, 'png',120,45,75,75);
-              doc.addImage(img4, 'png',120,130,75,75);
-              doc.addImage(img5, 'png',20,215,75,75);
-              doc.addImage(img6, 'png',120,215,75,75);
+              doc.addImage(img1, 'jpg',20,45,75,75);
+              doc.addImage(img2, 'jpg',20,130,75,75);
+              doc.addImage(img3, 'jpg',120,45,75,75);
+              doc.addImage(img4, 'jpg',120,130,75,75);
+              doc.addImage(img5, 'jpg',20,215,75,75);
+              doc.addImage(img6, 'jpg',120,215,75,75);
               doc.save('reporte-fotografico.pdf');
             }
           }
