@@ -13,11 +13,6 @@ let urls = [];
 form.addEventListener('submit', onClick);
 
 
-import jsPDF from './node_modules/jspdf/dist/jspdf.node.min.js'
-import { applyPlugin } from 'jspdf-autotable'
-applyPlugin(jsPDF)
-
-
 function onClick(event){
     console.log(event);
     event.preventDefault();
