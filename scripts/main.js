@@ -12,7 +12,6 @@ let imagesArray = []
 let urls = [];
 form.addEventListener('submit', onClick);
 
-const { jsPDF } = window.jspdf;
 
 function onClick(event){
     console.log(event);
