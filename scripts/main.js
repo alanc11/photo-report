@@ -4,7 +4,7 @@ let serial = document.querySelector('#sn');
 let date = document.querySelector('#date');
 let form = document.querySelector('#form')
 let entradas = document.querySelector('#entry');
-
+let comment = document.querySelector('#text');
 const output = document.querySelector("output")
 const input = document.querySelector("#photos")
 let imagesArray = []
@@ -64,6 +64,7 @@ function genPDF(event){
   doc.text(20,25,'Equipo: ' + equipment.value);
   doc.text(20,30,'Número de serie: ' + serial.value);
   doc.text(20,35,'Fecha: ' + date.value);
+  doc.text(20,40,'Comentario: ' + comment.value);
 
   const img1 = new Image();
   img1.src = urls[0];

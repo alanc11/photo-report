@@ -1,3 +1,105 @@
+:root{
+  /* Colores*/
+  --bitcoin-orange: #F7931A;
+  --soft-orange: #FFE9D5;
+  --secondary-blue: #1A9AF7;
+  --soft-blue:#E7F5FF;
+  --warm-black:#201E1C;
+  --warm-black-plus1: #282623;
+  --grey: #BABABA;
+  --off-white:#FAF8F7;
+  --just-white:#FFFFFF;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: "Merriweather", serif;
+  font-size: 62.5%;
+  background-color: var(--off-white);
+}
+li{
+  list-style: none;
+}
+header{
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-top: 8px;
+}
+.main-container{
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  background-color: var(--just-white);
+  border-radius: 8px;
+}
+form{
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+form .type1{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: solid thin var(--secondary-blue);
+  border-radius: 5px;
+}
+input::file-selector-button {
+  font-weight: bold;
+  color: var(--secondary-blue);
+  background-color: var(--off-white);
+  padding: 0.5em;
+  border: solid thin var(--secondary-blue);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.button-24 {
+  margin-top: 18px;
+  background: var(--secondary-blue);
+  border: 1px solid var(--secondary-blue);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: var(--secondary-blue);
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
 output{
     width: 100%;
     min-height: 150px;
