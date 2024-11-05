@@ -2,7 +2,7 @@
   /* Colores*/
   --bitcoin-orange: #F7931A;
   --soft-orange: #FFE9D5;
-  --secondary-blue: #1A9AF7;
+  --secondary-blue: #4B70F5;
   --soft-blue:#E7F5FF;
   --warm-black:#201E1C;
   --warm-black-plus1: #282623;
@@ -16,9 +16,10 @@
   box-sizing: border-box;
 }
 html{
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", sans-serif;
+  background: #212121;
   font-size: 62.5%;
-  background-color: var(--off-white);
+  /* background-color: var(--off-white); */
 }
 li{
   list-style: none;
@@ -37,22 +38,35 @@ header{
   width: 80%;
   height: auto;
   margin: 0 auto;
-  background-color: var(--just-white);
+  background-color: #323232;
   border-radius: 8px;
+  max-width: 450px;
+  min-width: 350px;
+  max-height: 700px;
 }
 form{
   width: 100%;
   height: 100%;
   padding: 15px;
+  color: white;
+  font-weight: 300;
 }
+
 form .type1{
   width: 100%;
+  height: 43px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: solid thin var(--secondary-blue);
+  border: solid 3px var(--secondary-blue);
   border-radius: 5px;
+  opacity: 70%;
 }
+#date{
+  font-family: "Work Sans", sans-serif;
+  opacity: 70%;
+}
+
 input::file-selector-button {
   font-weight: bold;
   color: var(--secondary-blue);
@@ -63,6 +77,15 @@ input::file-selector-button {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.button-28::file-selector-button {
+  font-family: "Work Sans", sans-serif;
+  color: #323232;
+  font-weight: 500;
+  border: solid 3px var(--secondary-blue);
+  height: 43px;
+  opacity: 70%;
+}
+
 .button-24 {
   margin-top: 18px;
   background: var(--secondary-blue);
@@ -87,6 +110,7 @@ input::file-selector-button {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
+  
 }
 
 .button-24:hover,
@@ -109,6 +133,7 @@ output{
     gap: 15px;
     position: relative;
     border-radius: 5px;
+
   }
   
   output .image{

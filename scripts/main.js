@@ -55,6 +55,9 @@ function deleteImage(index) {
   imagesArray.splice(index, 1)
   displayImages()
 }
+var logozeiss = new Image();
+  logozeiss.src = '../assets/logo.png';
+
 
 function genPDF(event){
   event.preventDefault();
@@ -65,6 +68,9 @@ function genPDF(event){
   doc.text(20,30,'Número de serie: ' + serial.value);
   doc.text(20,35,'Fecha: ' + date.value);
   doc.text(20,40,'Comentario: ' + comment.value);
+
+  
+  doc.addImage(logozeiss, 'png',160,15,35,20);
 
   const img1 = new Image();
   img1.src = urls[0];

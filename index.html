@@ -7,16 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 <body>
-    <header>Generador de reporte fotográfico</header>
+    <header></header>
     <main>
         <article class="main-container">
             <form action="" id="form">
                 <ul class="list">
                     <li>
-                      <label for="fse">FSE:</label>
+                      <label for="fse">FSE</label>
                       <input class="type1" type="text" id="fse" name="user_name" />
                     </li>
                     <li>
@@ -35,15 +38,15 @@
                         <label for="text">Comentario</label>
                         <input class="type1" type="text" id="text" name="text"></input>
                     </li>
-                    <li>
-                        <input class="button-28" type="file" id="photos" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
+                    <br>
+                        <input class="button-28" name="Subir fotos" type="file" id="photos" multiple="multiple" accept="image/jpeg, image/png, image/jpg" >
                         <output></output>
                     </li>
                     
                     <!-- <li class="sub-button">
                         <button id="btn" type="submit">Generar</button>
                     </li> -->
-                    <button class="button-24" onclick="genPDF(event)">GEN PDF</button>
+                    <button class="button-24" onclick="genPDF(event)">PDF</button>
                   </ul>
             </form>
             <p id="entry"></p>
@@ -55,6 +58,8 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
     <script type="text/javascript" src="./scripts/main.js"></script>
+
+    <script type="text/javascript" src="./assets/logo.jpg"></script>
 </body>
 </html>
 
