@@ -19,6 +19,16 @@
   --danger: #ef4444;
 }
 
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  font-size: 1.6rem !important; /* 16px previene el zoom de iOS Safari */
+  -webkit-appearance: none;     /* Remueve estilos nativos redondeados de iOS */
+  appearance: none;
+  max-width: 100%;              /* Evita que se salgan de su contenedor */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,12 +47,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 3rem 1.6rem;
+  overflow-x: hidden;
+  padding: 2rem 1.2rem; /* Margen seguro en bordes */
 }
 
 .app-wrapper {
   width: 100%;
   max-width: 480px;
+  overflow: hidden;
 }
 
 /* Tarjeta principal sin alturas fijas para evitar cortes */
@@ -55,6 +67,15 @@ body {
   height: auto;
   max-height: none;
   overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr; /* Una sola columna en teléfonos para mayor comodidad */
+    gap: 1.6rem;
+  }
 }
 
 /* Cabecera */
